@@ -154,7 +154,7 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-apps/bot/state_record/conversationbot
+/apps/bot/state_record/conversationbot
 # Pyre type checker
 .pyre/
 
