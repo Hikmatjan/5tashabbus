@@ -46,6 +46,7 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     "apps.common",
+    'apps.bot',
 ]
 
 THIRD_PARTY_APPS = [
@@ -172,6 +173,11 @@ CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379")
 CELERY_RESULT_BACKEND = env.str("CELERY_BROKER_URL", "redis://localhost:6379")
 
 CELERY_TIMEZONE = "Asia/Tashkent"
-
+BOT_TOKEN = env.str("BOT_TOKEN")
+WEBHOOK_URL = env.str("WEBHOOK_URL")
+TELEGRAM_CHANNELS = [
+    "-1001867557682"
+]
+TELEGRAM_ADMINS = [881319779,]
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
