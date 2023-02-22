@@ -154,7 +154,6 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-/apps/bot/state_record
 
 # Pyre type checker
 .pyre/
@@ -345,6 +344,8 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/python,django,pycharm+all
 
 /static/
+/apps/bot/state_record/conversationbot
+/locale/
 
 ### macOS ###
 .DS_Store
