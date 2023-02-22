@@ -1,8 +1,15 @@
 class State:
+    MAIN_MENU = 0
     JOIN_CHANNELS = 1
     CHOOSE_REGION = 2
     CHOOSE_TUMAN = 3
     CHOOSE_PRODUCT = 4
+    ABOUT_US = 5
+    BUY_PRODUCT = 6
+    SAVATCHA = 7
+    PHONE_NUMBER = 8
+    ADDRESS = 9
+    CONFIRM_ADDRESS = 10
 
 
 state = State()

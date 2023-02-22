@@ -7,7 +7,7 @@ from django.urls import path, include, re_path
 from .schema import swagger_urlpatterns
 
 urlpatterns = [
-    path("", admin.site.urls),
+    path("admin/", admin.site.urls),
     path('bot/', include('apps.bot.urls')),
 ]
 

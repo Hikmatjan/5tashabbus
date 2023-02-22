@@ -17,6 +17,21 @@ def request_phone_button():
     )
 
 
+def request_location_button():
+    return ReplyKeyboardMarkup(
+        [
+            [
+                KeyboardButton(
+                    text=str(_("📍Manzilni yuborish")),
+                    request_location=True,
+                    one_time_keyboard=True,
+                )
+            ]
+        ],
+        resize_keyboard=True,
+    )
+
+
 def back_button():
     return ReplyKeyboardMarkup(
         [
@@ -27,3 +42,13 @@ def back_button():
         resize_keyboard=True,
     )
 
+def confirm_address_button():
+    return ReplyKeyboardMarkup(
+        [
+            [
+                str(_("✅Tasdiqlash")),
+                str(_("❌Qayta yuborish")),
+            ]
+        ],
+        resize_keyboard=True,
+    )

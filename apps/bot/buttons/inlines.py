@@ -33,6 +33,11 @@ def regions_keyboard():
             res = []
     if res:
         data.append(res)
+    data.append(
+        [
+            InlineKeyboardButton(text=str(_("Orqaga")), callback_data="back"),
+        ]
+    )
     return InlineKeyboardMarkup(
         data
     )
@@ -48,6 +53,11 @@ def tumans_keyboard(region: Region):
             res = []
     if res:
         data.append(res)
+    data.append(
+        [
+            InlineKeyboardButton(text=str(_("Orqaga")), callback_data="back"),
+        ]
+    )
     return InlineKeyboardMarkup(
         data
     )
@@ -63,16 +73,78 @@ def products_keyboard(products: list):
             res = []
     if res:
         data.append(res)
+
+    data.append(
+        [
+            InlineKeyboardButton(text=str(_("Orqaga")), callback_data="back"),
+        ]
+    )
     return InlineKeyboardMarkup(
         data
     )
 
 
-def buy_product(product):
+def buy_product(product, quantity=1):
     data = []
-    res = []
-    res.append(InlineKeyboardButton(text=str(_("Buyurtma berish")), callback_data=product.id))
+    res = [InlineKeyboardButton(text=str(_("➖")), callback_data=f"minus"),
+           InlineKeyboardButton(text=f"{quantity}", callback_data=f"quantity_{product.id}"),
+           InlineKeyboardButton(text=str(_("➕")), callback_data=f"plus")]
     data.append(res)
+    res = [InlineKeyboardButton(text=str(_("Savatchaga qo'shish")), callback_data='add_to_cart')]
+    data.append(res)
+    data.append(
+        [
+            InlineKeyboardButton(text=str(_("Orqaga")), callback_data="back"),
+        ]
+    )
+    return InlineKeyboardMarkup(
+        data
+    )
+
+
+def main_buttons():
+    data = [
+        [InlineKeyboardButton(text=str(_("Mahsulot sotib olish")), callback_data="buy_product")],
+        [InlineKeyboardButton(text=str(_("Savatcha")), callback_data="savatcha"),
+         InlineKeyboardButton(text=str(_("Mening buyurtmalarim")), callback_data="my_orders")],
+        [InlineKeyboardButton(text=str(_("Biz haqimizda")), callback_data="about_us")],
+    ]
+
+    return InlineKeyboardMarkup(
+        data
+    )
+
+
+def back_to_main():
+    data = [
+        [InlineKeyboardButton(text=str(_("Orqaga")), callback_data="back")],
+    ]
+
+    return InlineKeyboardMarkup(
+        data
+    )
+
+
+def order_buttons(order):
+    data = [
+        [InlineKeyboardButton(text=str(_("Buyurtmani tasdiqlash")), callback_data=f"confirm_order")],
+        [InlineKeyboardButton(text=str(_("Buyurtmani davom ettirish")), callback_data=f"continue_order")],
+        [InlineKeyboardButton(text=str(_("Tozalash")), callback_data=f"clear_order")],
+    ]
+    items = order.items.all()
+    if items:
+        for i in items:
+            res = [
+                InlineKeyboardButton(text=str(_("➖")), callback_data=f"minus_{i.id}"),
+                InlineKeyboardButton(text=f"{i.product.title}", callback_data=f"product"),
+                InlineKeyboardButton(text=str(_("➕")), callback_data=f"plus_{i.id}"),
+            ]
+            data.append(res)
+    data.append(
+        [
+            InlineKeyboardButton(text=str(_("Orqaga")), callback_data="back"),
+        ]
+    )
     return InlineKeyboardMarkup(
         data
     )

@@ -7,10 +7,12 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from telegram import Bot, Update
-from telegram.ext import CommandHandler, ConversationHandler, Dispatcher, PicklePersistence, CallbackQueryHandler
+from telegram.ext import CommandHandler, ConversationHandler, Dispatcher, PicklePersistence, CallbackQueryHandler, \
+    MessageHandler, Filters
 
 from apps.bot.states import state
-from apps.bot.telegrambot import start, check_join_channel, get_region, get_tuman, get_product
+from apps.bot.telegrambot import start, check_join_channel, get_region, get_tuman, get_product, main_menu, \
+    about_us_button, add_product_to_savatcha, savatcha, get_phone_number, get_address, confirm_address
 from core.settings.base import BOT_TOKEN as token
 from django.conf import settings
 
@@ -40,6 +42,29 @@ def setup(token):
         ],
         state.CHOOSE_PRODUCT: [
             CallbackQueryHandler(get_product)
+        ],
+        state.MAIN_MENU: [
+            CallbackQueryHandler(main_menu)
+        ],
+        state.ABOUT_US: [
+            CallbackQueryHandler(about_us_button)
+        ],
+        state.BUY_PRODUCT: [
+            CallbackQueryHandler(add_product_to_savatcha)
+        ],
+        state.SAVATCHA: [
+            CallbackQueryHandler(savatcha)
+        ],
+        state.PHONE_NUMBER: [
+            CommandHandler("start", start),
+            MessageHandler(Filters.text, get_phone_number),
+            MessageHandler(Filters.contact, get_phone_number)
+        ],
+        state.ADDRESS: [
+            MessageHandler(Filters.location, get_address)
+        ],
+        state.CONFIRM_ADDRESS: [
+            MessageHandler(Filters.text, confirm_address)
         ]
     }
     entry_points = [CommandHandler('start', start)]

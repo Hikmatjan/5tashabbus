@@ -37,6 +37,9 @@ class TelegramUser(BaseModel):
     phone_number = models.CharField(max_length=255, verbose_name=_("Phone Number"), null=True, blank=True)
     is_active = models.BooleanField(default=True, verbose_name=_("Is Active"))
 
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
     def __str__(self):
         return self.telegram_id
 
@@ -68,6 +71,7 @@ class Product(BaseModel):
 
 class OrderStatus(models.TextChoices):
     NEW = 'NEW', _('New')
+    ACCEPTED = 'ACCEPTED', _('Accepted')
     CANCELED = 'CANCELED', _('Canceled')
     DELIVERED = 'DELIVERED', _('Delivered')
 
@@ -76,6 +80,10 @@ class Order(BaseModel):
     user = models.ForeignKey(TelegramUser, on_delete=models.CASCADE, related_name='orders', verbose_name=_("User"))
     status = models.CharField(max_length=255, verbose_name=_("Status"), choices=OrderStatus.choices,
                               default=OrderStatus.NEW)
+    phone = models.CharField(max_length=255, verbose_name=_("Phone"), null=True, blank=True)
+    address = models.CharField(max_length=255, verbose_name=_("Address"), null=True, blank=True)
+    longitute = models.FloatField(verbose_name=_("Longitute"), null=True, blank=True)
+    latitude = models.FloatField(verbose_name=_("Latitude"), null=True, blank=True)
 
     def __str__(self):
         return self.user.first_name
@@ -87,9 +95,9 @@ class Order(BaseModel):
 
 class OrderItem(BaseModel):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items', verbose_name=_("Order"))
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='orders', verbose_name=_("Product"))
-    quantity = models.IntegerField(verbose_name=_("Quantity"))
-    price = models.FloatField(verbose_name=_("Buyed Price"))
+    product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name='orders', verbose_name=_("Product"))
+    quantity = models.IntegerField(verbose_name=_("Quantity"), default=0)
+    price = models.FloatField(verbose_name=_("Buyed Price"), default=0)
 
     def __str__(self):
         return self.product.title
