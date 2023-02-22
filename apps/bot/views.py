@@ -10,7 +10,7 @@ from telegram import Bot, Update
 from telegram.ext import CommandHandler, ConversationHandler, Dispatcher, PicklePersistence, CallbackQueryHandler
 
 from apps.bot.states import state
-from apps.bot.telegrambot import start, check_join_channel
+from apps.bot.telegrambot import start, check_join_channel, get_region, get_tuman, get_product
 from core.settings.base import BOT_TOKEN as token
 from django.conf import settings
 
@@ -31,6 +31,15 @@ def setup(token):
     states = {
         state.JOIN_CHANNELS: [
             CallbackQueryHandler(check_join_channel)
+        ],
+        state.CHOOSE_REGION: [
+            CallbackQueryHandler(get_region)
+        ],
+        state.CHOOSE_TUMAN: [
+            CallbackQueryHandler(get_tuman)
+        ],
+        state.CHOOSE_PRODUCT: [
+            CallbackQueryHandler(get_product)
         ]
     }
     entry_points = [CommandHandler('start', start)]

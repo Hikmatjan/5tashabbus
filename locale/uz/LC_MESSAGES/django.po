@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-22 11:08+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: apps/bot/buttons/inlines.py:19
+msgid "Tekshirish"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:74
+msgid "Buyurtma berish"
+msgstr ""
+
+#: apps/bot/buttons/keyboard.py:10
+msgid "📞Telefon raqamni yuborish"
+msgstr ""
+
+#: apps/bot/buttons/keyboard.py:24
+msgid "⬅️Orqaga"
+msgstr ""
+
+#: apps/bot/models.py:8 apps/bot/models.py:20 apps/bot/models.py:49
+msgid "Title"
+msgstr ""
+
+#: apps/bot/models.py:9 apps/bot/models.py:22 apps/bot/models.py:38
+#: apps/bot/models.py:55
+msgid "Is Active"
+msgstr ""
+
+#: apps/bot/models.py:15 apps/bot/models.py:21
+msgid "Region"
+msgstr ""
+
+#: apps/bot/models.py:16
+msgid "Regions"
+msgstr ""
+
+#: apps/bot/models.py:28 apps/bot/models.py:51
+msgid "City"
+msgstr ""
+
+#: apps/bot/models.py:29
+msgid "Cities"
+msgstr ""
+
+#: apps/bot/models.py:33
+msgid "Telegram ID"
+msgstr ""
+
+#: apps/bot/models.py:34
+msgid "First Name"
+msgstr ""
+
+#: apps/bot/models.py:35
+msgid "Last Name"
+msgstr ""
+
+#: apps/bot/models.py:36
+msgid "Username"
+msgstr ""
+
+#: apps/bot/models.py:37
+msgid "Phone Number"
+msgstr ""
+
+#: apps/bot/models.py:44
+msgid "Telegram User"
+msgstr ""
+
+#: apps/bot/models.py:45
+msgid "Telegram Users"
+msgstr ""
+
+#: apps/bot/models.py:50
+msgid "Description"
+msgstr ""
+
+#: apps/bot/models.py:52
+msgid "Price"
+msgstr ""
+
+#: apps/bot/models.py:53 apps/bot/models.py:91
+msgid "Quantity"
+msgstr ""
+
+#: apps/bot/models.py:54
+msgid "Image"
+msgstr ""
+
+#: apps/bot/models.py:65 apps/bot/models.py:90
+msgid "Product"
+msgstr ""
+
+#: apps/bot/models.py:66
+msgid "Products"
+msgstr ""
+
+#: apps/bot/models.py:70
+msgid "New"
+msgstr ""
+
+#: apps/bot/models.py:71
+msgid "Canceled"
+msgstr ""
+
+#: apps/bot/models.py:72
+msgid "Delivered"
+msgstr ""
+
+#: apps/bot/models.py:76
+msgid "User"
+msgstr ""
+
+#: apps/bot/models.py:77
+msgid "Status"
+msgstr ""
+
+#: apps/bot/models.py:84 apps/bot/models.py:89
+msgid "Order"
+msgstr ""
+
+#: apps/bot/models.py:85
+msgid "Orders"
+msgstr ""
+
+#: apps/bot/models.py:92
+msgid "Buyed Price"
+msgstr ""
+
+#: apps/bot/models.py:98
+msgid "Order Item"
+msgstr ""
+
+#: apps/bot/models.py:99
+msgid "Order Items"
+msgstr ""
+
+#: apps/bot/telegrambot.py:33
+msgid "Kanal topilmadi"
+msgstr ""
+
+#: apps/bot/telegrambot.py:45
+msgid "Assalomu alaykum 5 tashabbus botiga xush kelibsiz."
+msgstr ""
+
+#: apps/bot/telegrambot.py:50
+msgid "Bot ishlatish uchun kanallarga a'zo bo'lishingiz kerak."
+msgstr ""
+
+#: apps/bot/telegrambot.py:55
+msgid "Quyidagi viloyatlardan birini tanlang."
+msgstr ""
+
+#: apps/bot/telegrambot.py:66 apps/bot/telegrambot.py:89
+msgid "Quyidagi viloyatlardan birini tanlang"
+msgstr ""
+
+#: apps/bot/telegrambot.py:82
+msgid "Quyidagi tumanlardan birini tanlang "
+msgstr ""
+
+#: apps/bot/telegrambot.py:103
+msgid "Ushbu tumandagi quyidagi mahsulotlardan birini tanlang"
+msgstr ""
+
+#: apps/bot/telegrambot.py:108
+msgid "Mahsulotlar topilmadi Iltimos boshqa tumani tanlang"
+msgstr ""
+
+#: apps/bot/telegrambot.py:118
+msgid ""
+"Mahsulot haqida qisqacha malumot\n"
+"<b>Mahsulot nomi:</b>"
+msgstr ""
+
+#: apps/bot/telegrambot.py:119
+msgid ""
+"\n"
+"<b>Mahsulot narxi:</b> "
+msgstr ""
+
+#: apps/bot/telegrambot.py:120
+msgid ""
+"\n"
+"<b>Mahsulot haqida qisqacha:</b> "
+msgstr ""

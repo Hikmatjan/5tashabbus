@@ -6,3 +6,5 @@ django-jazzmin==2.6.0
 drf-yasg==1.21.5
 djangorestframework==3.14.0
 django-filter==22.1
+Pillow==9.4.0
+django-rosetta==0.9.8

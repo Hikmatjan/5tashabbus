@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import os
 from pathlib import Path
 
 import environ
@@ -53,6 +54,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "drf_yasg",
     "corsheaders",
+    'rosetta',
 ]
 
 REST_FRAMEWORK = {
@@ -135,14 +137,18 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
-
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "uz"
 
 TIME_ZONE = "Asia/Tashkent"
 
 USE_I18N = True
 
 USE_TZ = True
+USE_L10N = True
+LANGUAGES = [
+    ('uz', 'Uzbek'),
+]
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -178,6 +184,6 @@ WEBHOOK_URL = env.str("WEBHOOK_URL")
 TELEGRAM_CHANNELS = [
     "-1001867557682"
 ]
-TELEGRAM_ADMINS = [881319779,]
+TELEGRAM_ADMINS = [881319779, ]
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
