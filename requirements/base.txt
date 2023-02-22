@@ -8,3 +8,4 @@ djangorestframework==3.14.0
 django-filter==22.1
 Pillow==9.4.0
 django-rosetta==0.9.8
+python-telegram-bot==13.15
