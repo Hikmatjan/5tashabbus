@@ -23,16 +23,17 @@ def check_member_joins(bot: Bot, tg_user: TelegramUser):
     admins = settings.TELEGRAM_ADMINS
     for i in channels:
         try:
-            # check if user is member of channel
-            print(bot.get_chat_member(chat_id=i, user_id=tg_user.telegram_id).status)
             if bot.get_chat_member(chat_id=i, user_id=tg_user.telegram_id).status not in ["member", 'creator',
                                                                                           'administrator']:
                 return False
-        # chat not found
         except Exception as e:
             logger.error(e)
-            for j in admins:
-                bot.send_message(chat_id=j, text=str(_("Kanal topilmadi")) + f" {bot.get_chat(i).title}")
+            try:
+                for j in admins:
+                    bot.send_message(chat_id=j, text=str(_("Kanal topilmadi")) + f" {i}")
+            except Exception as e:
+                print(e)
+                pass
             continue
     return True
 
