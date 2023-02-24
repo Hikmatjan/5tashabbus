@@ -8,37 +8,93 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 11:08+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-02-24 14:03+0500\n"
+"PO-Revision-Date: 2023-02-24 14:03+0500\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
 #: apps/bot/buttons/inlines.py:19
 msgid "Tekshirish"
 msgstr ""
 
-#: apps/bot/buttons/inlines.py:74
-msgid "Buyurtma berish"
+#: apps/bot/buttons/inlines.py:38 apps/bot/buttons/inlines.py:58
+#: apps/bot/buttons/inlines.py:79 apps/bot/buttons/inlines.py:97
+#: apps/bot/buttons/inlines.py:120 apps/bot/buttons/inlines.py:145
+msgid "Orqaga"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:89 apps/bot/buttons/inlines.py:138
+msgid "➖"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:91 apps/bot/buttons/inlines.py:140
+msgid "➕"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:93
+msgid "Savatchaga qo'shish"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:107
+msgid "Mahsulot sotib olish"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:108
+msgid "Savatcha"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:109
+msgid "Mening buyurtmalarim"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:110
+msgid "Biz haqimizda"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:130
+msgid "Buyurtmani tasdiqlash"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:131
+msgid "Buyurtmani davom ettirish"
+msgstr ""
+
+#: apps/bot/buttons/inlines.py:132
+msgid "Tozalash"
 msgstr ""
 
 #: apps/bot/buttons/keyboard.py:10
 msgid "📞Telefon raqamni yuborish"
 msgstr ""
 
-#: apps/bot/buttons/keyboard.py:24
+#: apps/bot/buttons/keyboard.py:25
+msgid "📍Manzilni yuborish"
+msgstr ""
+
+#: apps/bot/buttons/keyboard.py:39
 msgid "⬅️Orqaga"
 msgstr ""
 
-#: apps/bot/models.py:8 apps/bot/models.py:20 apps/bot/models.py:49
+#: apps/bot/buttons/keyboard.py:49 apps/bot/telegrambot.py:247
+msgid "✅Tasdiqlash"
+msgstr ""
+
+#: apps/bot/buttons/keyboard.py:50
+msgid "❌Qayta yuborish"
+msgstr ""
+
+#: apps/bot/models.py:8 apps/bot/models.py:20 apps/bot/models.py:52
 msgid "Title"
 msgstr ""
 
 #: apps/bot/models.py:9 apps/bot/models.py:22 apps/bot/models.py:38
-#: apps/bot/models.py:55
+#: apps/bot/models.py:58
 msgid "Is Active"
 msgstr ""
 
@@ -50,7 +106,7 @@ msgstr ""
 msgid "Regions"
 msgstr ""
 
-#: apps/bot/models.py:28 apps/bot/models.py:51
+#: apps/bot/models.py:28 apps/bot/models.py:54
 msgid "City"
 msgstr ""
 
@@ -78,75 +134,95 @@ msgstr ""
 msgid "Phone Number"
 msgstr ""
 
-#: apps/bot/models.py:44
+#: apps/bot/models.py:47
 msgid "Telegram User"
 msgstr ""
 
-#: apps/bot/models.py:45
+#: apps/bot/models.py:48
 msgid "Telegram Users"
 msgstr ""
 
-#: apps/bot/models.py:50
+#: apps/bot/models.py:53
 msgid "Description"
 msgstr ""
 
-#: apps/bot/models.py:52
+#: apps/bot/models.py:55
 msgid "Price"
 msgstr ""
 
-#: apps/bot/models.py:53 apps/bot/models.py:91
+#: apps/bot/models.py:56 apps/bot/models.py:99
 msgid "Quantity"
 msgstr ""
 
-#: apps/bot/models.py:54
+#: apps/bot/models.py:57
 msgid "Image"
 msgstr ""
 
-#: apps/bot/models.py:65 apps/bot/models.py:90
+#: apps/bot/models.py:68 apps/bot/models.py:98
 msgid "Product"
 msgstr ""
 
-#: apps/bot/models.py:66
+#: apps/bot/models.py:69
 msgid "Products"
 msgstr ""
 
-#: apps/bot/models.py:70
+#: apps/bot/models.py:73
 msgid "New"
 msgstr ""
 
-#: apps/bot/models.py:71
+#: apps/bot/models.py:74
+msgid "Accepted"
+msgstr ""
+
+#: apps/bot/models.py:75
 msgid "Canceled"
 msgstr ""
 
-#: apps/bot/models.py:72
+#: apps/bot/models.py:76
 msgid "Delivered"
 msgstr ""
 
-#: apps/bot/models.py:76
+#: apps/bot/models.py:80
 msgid "User"
 msgstr ""
 
-#: apps/bot/models.py:77
+#: apps/bot/models.py:81
 msgid "Status"
 msgstr ""
 
-#: apps/bot/models.py:84 apps/bot/models.py:89
-msgid "Order"
+#: apps/bot/models.py:83
+msgid "Phone"
+msgstr ""
+
+#: apps/bot/models.py:84
+msgid "Address"
 msgstr ""
 
 #: apps/bot/models.py:85
+msgid "Longitute"
+msgstr ""
+
+#: apps/bot/models.py:86
+msgid "Latitude"
+msgstr ""
+
+#: apps/bot/models.py:92 apps/bot/models.py:97
+msgid "Order"
+msgstr ""
+
+#: apps/bot/models.py:93
 msgid "Orders"
 msgstr ""
 
-#: apps/bot/models.py:92
+#: apps/bot/models.py:100
 msgid "Buyed Price"
 msgstr ""
 
-#: apps/bot/models.py:98
+#: apps/bot/models.py:106
 msgid "Order Item"
 msgstr ""
 
-#: apps/bot/models.py:99
+#: apps/bot/models.py:107
 msgid "Order Items"
 msgstr ""
 
@@ -154,48 +230,153 @@ msgstr ""
 msgid "Kanal topilmadi"
 msgstr ""
 
-#: apps/bot/telegrambot.py:45
-msgid "Assalomu alaykum 5 tashabbus botiga xush kelibsiz."
-msgstr ""
+#: apps/bot/telegrambot.py:49
+#, fuzzy
+#| msgid "Bot ishlatish uchun kanallarga a'zo bo'lishingiz kerak."
+msgid ""
+"Assalomu alaykum 5 tashabbus botiga xush kelibsiz.Bot ishlatish uchun "
+"kanallarga a'zo bo'lishingiz kerak."
+msgstr "Botdan foydalanish uchun kanallarimizga a'zo bo'lishingiz kerak."
 
-#: apps/bot/telegrambot.py:50
-msgid "Bot ishlatish uchun kanallarga a'zo bo'lishingiz kerak."
+#: apps/bot/telegrambot.py:61 apps/bot/telegrambot.py:298
+#, fuzzy
+#| msgid "Assalomu alaykum 5 tashabbus botiga xush kelibsiz."
+msgid ""
+"Assalomu alaykum 5 tashabbus botiga xush kelibsiz. Ushbu bot orqali siz "
+"mahsulotlarni sotib olishingiz mumkin"
 msgstr ""
+" Assalomu Alaykum Maktabgacha va Maktab ta'limi vazirligi "
+"huzuridagi\"Barkamol avlod\" respublika bolalar maktabining BAM_shop botiga "
+"xush kelibsiz"
 
-#: apps/bot/telegrambot.py:55
+#: apps/bot/telegrambot.py:74
 msgid "Quyidagi viloyatlardan birini tanlang."
 msgstr ""
 
-#: apps/bot/telegrambot.py:66 apps/bot/telegrambot.py:89
+#: apps/bot/telegrambot.py:79
+msgid "Sizning buyurtmalar"
+msgstr ""
+
+#: apps/bot/telegrambot.py:86 apps/bot/telegrambot.py:162
+msgid ""
+"Sizning savatchangizda quyidagi mahsulotlar bor:\n"
+"\n"
+msgstr ""
+
+#: apps/bot/telegrambot.py:99 apps/bot/telegrambot.py:213
+#: apps/bot/telegrambot.py:282
+msgid "Sizning savatchangiz bo'sh"
+msgstr ""
+
+#: apps/bot/telegrambot.py:105
+msgid "Biz haqimizda malumot!!!"
+msgstr ""
+
+#: apps/bot/telegrambot.py:117
+msgid "Asosiy Menu"
+msgstr ""
+
+#: apps/bot/telegrambot.py:126
+msgid "Savatcha tozalandi"
+msgstr ""
+
+#: apps/bot/telegrambot.py:132
+msgid "Buyurtma berishni davom ettirishingiz mumkin"
+msgstr ""
+
+#: apps/bot/telegrambot.py:139
+msgid "Siz bilan bog'lasnish uchun telefon raqamingizni yuboring"
+msgstr ""
+
+#: apps/bot/telegrambot.py:151
+msgid "Mahsulot yetarli emas"
+msgstr ""
+
+#: apps/bot/telegrambot.py:157
+msgid "Mahsulot soni 0 dan kichik bo'lishi mumkin emas"
+msgstr ""
+
+#: apps/bot/telegrambot.py:199
+msgid "Raqamni to'g'ri kiriting"
+msgstr ""
+
+#: apps/bot/telegrambot.py:207
+msgid "Buyurtmani yakunlash uchun manzilingizni yuboring"
+msgstr ""
+
+#: apps/bot/telegrambot.py:234
+msgid "Manzilingiz: "
+msgstr ""
+
+#: apps/bot/telegrambot.py:234
+msgid ""
+"\n"
+"Buyurtmani yakunlash uchun tasdiqlang"
+msgstr ""
+
+#: apps/bot/telegrambot.py:276
+msgid "Buyurtma qabul qilindi"
+msgstr ""
+
+#: apps/bot/telegrambot.py:288
+msgid "Manzilingizni qayta yuboring"
+msgstr ""
+
+#: apps/bot/telegrambot.py:310 apps/bot/telegrambot.py:339
+#: apps/bot/telegrambot.py:350
 msgid "Quyidagi viloyatlardan birini tanlang"
 msgstr ""
 
-#: apps/bot/telegrambot.py:82
+#: apps/bot/telegrambot.py:324
+msgid "Mahsulot sotib olish uchun Buyurtma berish tugmasini bosing"
+msgstr ""
+
+#: apps/bot/telegrambot.py:332 apps/bot/telegrambot.py:376
 msgid "Quyidagi tumanlardan birini tanlang "
 msgstr ""
 
-#: apps/bot/telegrambot.py:103
+#: apps/bot/telegrambot.py:360 apps/bot/telegrambot.py:415
+#: apps/bot/telegrambot.py:420
 msgid "Ushbu tumandagi quyidagi mahsulotlardan birini tanlang"
-msgstr ""
+msgstr "Ushbu tumandagi mahsulotlardan birini tanlang"
 
-#: apps/bot/telegrambot.py:108
+#: apps/bot/telegrambot.py:365 apps/bot/telegrambot.py:425
 msgid "Mahsulotlar topilmadi Iltimos boshqa tumani tanlang"
-msgstr ""
+msgstr "Mahsulot topilmadi,iltimos sizga yaqin manzildagi tumanni tanlang"
 
-#: apps/bot/telegrambot.py:118
+#: apps/bot/telegrambot.py:385 apps/bot/telegrambot.py:468
 msgid ""
 "Mahsulot haqida qisqacha malumot\n"
 "<b>Mahsulot nomi:</b>"
 msgstr ""
 
-#: apps/bot/telegrambot.py:119
+#: apps/bot/telegrambot.py:386 apps/bot/telegrambot.py:469
 msgid ""
 "\n"
 "<b>Mahsulot narxi:</b> "
 msgstr ""
 
-#: apps/bot/telegrambot.py:120
+#: apps/bot/telegrambot.py:387 apps/bot/telegrambot.py:470
 msgid ""
 "\n"
 "<b>Mahsulot haqida qisqacha:</b> "
+msgstr ""
+
+#: apps/bot/telegrambot.py:388 apps/bot/telegrambot.py:471
+msgid ""
+"\n"
+"<b>Mahsulot soni:</b> "
+msgstr ""
+
+#: apps/bot/telegrambot.py:390 apps/bot/telegrambot.py:473
+msgid "Jamis summa: "
+msgstr ""
+
+#: apps/bot/telegrambot.py:430 apps/bot/telegrambot.py:455
+#: apps/bot/telegrambot.py:462
+msgid "Mahsulotlar soni yetarli emas"
+msgstr ""
+
+#: apps/bot/telegrambot.py:441 apps/bot/telegrambot.py:446
+msgid "Mahsulot savatchaga qo'shildi"
 msgstr ""
