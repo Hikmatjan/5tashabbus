@@ -105,8 +105,7 @@ def buy_product(product, quantity=1):
 def main_buttons():
     data = [
         [InlineKeyboardButton(text=str(_("Mahsulot sotib olish")), callback_data="buy_product")],
-        [InlineKeyboardButton(text=str(_("Savatcha")), callback_data="savatcha"),
-         InlineKeyboardButton(text=str(_("Mening buyurtmalarim")), callback_data="my_orders")],
+        [InlineKeyboardButton(text=str(_("Savatcha")), callback_data="savatcha")],
         [InlineKeyboardButton(text=str(_("Biz haqimizda")), callback_data="about_us")],
     ]
 
