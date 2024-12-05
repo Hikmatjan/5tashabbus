@@ -217,7 +217,7 @@ def get_phone_number(update: Update, context: CallbackContext, tg_user: Telegram
 
 
 def get_address_by_long_lat(longitude: float, latitude: float):
-    url = f"https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat={latitude}&lon={longitude}"
+    url = f"https://uzmap.xn--h28h.uz/reverse?format=jsonv2&lat={latitude}&lon={longitude}"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
