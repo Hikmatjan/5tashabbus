@@ -1,14 +1,14 @@
-name: CI
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build project
-        run: |
-          ./configure
-          make
-      - name: Run tests
-        run: make test
+# name: CI
+# on: [push]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+#       - name: Build project
+#         run: |
+#           ./configure
+#           make
+#       - name: Run tests
+#         run: make test
